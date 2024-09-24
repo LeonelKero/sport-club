@@ -72,4 +72,8 @@ public class CyclingRepository {
                 .listOfRows()
                 .size();
     }
+
+    public void saveAll(final Collection<CreateCyclingTour> cyclingTours) {
+        cyclingTours.forEach(this::save);
+    }
 }

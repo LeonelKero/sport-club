@@ -1,6 +1,7 @@
 package com.workbeattalent.sport_club.cycling;
 
 import java.util.Collection;
+import java.util.List;
 
 public interface CyclingService {
     Collection<CyclingTour> findAll();
@@ -14,4 +15,8 @@ public interface CyclingService {
     void delete(final Long tour);
 
     CyclingTour getById(final Long tour);
+
+    void saveAll(final List<CreateCyclingTour> tours);
+
+    Integer count();
 }

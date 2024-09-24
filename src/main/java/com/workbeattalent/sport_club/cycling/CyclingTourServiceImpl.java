@@ -3,6 +3,7 @@ package com.workbeattalent.sport_club.cycling;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.List;
 
 @Service
 public class CyclingTourServiceImpl implements CyclingService {
@@ -51,5 +52,15 @@ public class CyclingTourServiceImpl implements CyclingService {
         final var result = this.cyclingRepository.findById(tour);
         if (result.isEmpty()) throw new CyclingNotFoundException("Cycling Tour not found");
         return result.get();
+    }
+
+    @Override
+    public void saveAll(final List<CreateCyclingTour> tours) {
+        this.cyclingRepository.saveAll(tours);
+    }
+
+    @Override
+    public Integer count() {
+        return this.cyclingRepository.count();
     }
 }
