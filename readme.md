@@ -10,3 +10,4 @@
 - Lombok
 - Spring Starter Validation
 - Spring Starter Test
+- JSON
