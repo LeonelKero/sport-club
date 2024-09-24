@@ -3,9 +3,11 @@ package com.workbeattalent.sport_club.cycling;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
+@Component
 public class CyclingJsonLoader implements CommandLineRunner {
 
     private final CyclingService cyclingService;

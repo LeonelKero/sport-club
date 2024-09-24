@@ -2,36 +2,36 @@
   "tours": [
     {
       "title": "Morning routine",
-      "startedOn": "2024-08-15T06:45:25",
-      "completedOn": "2024-08-15T08:30:00",
+      "startedAt": "2024-08-15 06:45:25",
+      "completedAt": "2024-08-15 08:30:00",
       "distance": 7.5,
       "location": "IN_CITY"
     },
     {
       "title": "Bamengo Tour",
-      "startedOn": "2024-09-03T05:00:00",
-      "completedOn": "2024-09-03T05:30:00",
+      "startedAt": "2024-09-03 05:00:00",
+      "completedAt": "2024-09-03 05:30:00",
       "distance": 3.2,
       "location": "IN_TOWN"
     },
     {
       "title": "Njiandam Tour",
-      "startedOn": "2024-01-03T05:00:00",
-      "completedOn": "2024-01-03T05:30:00",
+      "startedAt": "2024-01-03 05:00:00",
+      "completedAt": "2024-01-03 05:30:00",
       "distance": 10.0,
       "location": "IN_CITY"
     },
     {
       "title": "Tamdja Tour",
-      "startedOn": "2024-06-03T05:00:00",
-      "completedOn": "2024-06-03T05:30:00",
+      "startedAt": "2024-06-03 05:00:00",
+      "completedAt": "2024-06-03 05:30:00",
       "distance": 8.0,
       "location": "IN_TOWN"
     },
     {
       "title": "Bamengo-Voltaire Tour",
-      "startedOn": "2024-05-03T05:00:00",
-      "completedOn": "2024-05-03T05:30:00",
+      "startedAt": "2024-05-03 05:00:00",
+      "completedAt": "2024-05-03 05:30:00",
       "distance": 1.5,
       "location": "INDOOR"
     }
