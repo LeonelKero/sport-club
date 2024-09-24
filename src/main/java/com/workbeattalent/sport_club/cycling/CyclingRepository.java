@@ -35,7 +35,7 @@ public class CyclingRepository {
         final var affectedRows = this.jdbcClient
                 .sql("insert into cycling(title, started_on, completed_on, distance, location) " +
                         "values (?, ?, ?, ?, ?)")
-                .params(List.of(tour.title(), tour.startAt(), tour.completedAt(),
+                .params(List.of(tour.title(), tour.startedAt(), tour.completedAt(),
                         tour.distance(), tour.location().toString()))
                 .update();
         // If this assertion is not met, a runtime exception is thrown and stop
@@ -44,7 +44,7 @@ public class CyclingRepository {
 
     public Collection<CyclingTour> findByLocation(final Location location) {
         return this.jdbcClient.sql("select * from cycling where location = :loc")
-                .param("loc", location)
+                .param("loc", location.toString())
                 .query(CyclingTour.class)
                 .list();
     }
@@ -53,7 +53,7 @@ public class CyclingRepository {
         final var affectedRows = this.jdbcClient
                 .sql("update cycling set title = ?, started_on = ?, completed_on = ?, " +
                         "distance = ?, location = ? where id = ?")
-                .params(List.of(cyclingTour.title(), cyclingTour.startAt(), cyclingTour.completedAt(),
+                .params(List.of(cyclingTour.title(), cyclingTour.startedAt(), cyclingTour.completedAt(),
                         cyclingTour.distance(), cyclingTour.location(), tour))
                 .update();
         Assert.state(affectedRows == 1, "Unable to update tour " + tour);

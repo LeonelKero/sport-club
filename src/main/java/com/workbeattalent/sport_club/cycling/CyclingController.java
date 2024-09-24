@@ -1,6 +1,7 @@
 package com.workbeattalent.sport_club.cycling;
 
 import com.workbeattalent.sport_club.api.ApiResponse;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +29,9 @@ public record CyclingController(CyclingService cyclingService) {
 
     @GetMapping(path = {"/location/{location}"})
     public ResponseEntity<ApiResponse> getByLocation(final @PathVariable String location) {
-        return ResponseEntity.ok(new ApiResponse("Cycling Tours made " + location, this.cyclingService.findByLocation(location)));
+        return ResponseEntity.ok(new ApiResponse(
+                "Cycling Tours made " + location,
+                this.cyclingService.findByLocation(location.trim().toUpperCase())));
     }
 
     @DeleteMapping(path = {"/{id}"})
@@ -44,7 +47,7 @@ public record CyclingController(CyclingService cyclingService) {
     }
 
     @PostMapping
-    public ResponseEntity<ApiResponse> record(final @RequestBody CreateCyclingTour newTour) {
+    public ResponseEntity<ApiResponse> record(final @Valid @RequestBody CreateCyclingTour newTour) {
         try {
             this.cyclingService.save(newTour);
             return ResponseEntity.status(HttpStatus.CREATED)
