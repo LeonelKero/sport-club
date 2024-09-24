@@ -4,4 +4,4 @@ spring:
       enabled: true
   datasource:
     generate-unique-name: false
-    name: cycling_tour
+    name: sports

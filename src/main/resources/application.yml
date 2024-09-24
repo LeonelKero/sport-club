@@ -3,3 +3,7 @@ server:
 spring:
   application:
     name: sport-club
+
+api:
+  v1:
+    prefix: /api/v1/sports
