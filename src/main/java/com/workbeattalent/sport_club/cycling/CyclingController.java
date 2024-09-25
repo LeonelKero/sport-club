@@ -27,8 +27,8 @@ public record CyclingController(CyclingService cyclingService) {
         }
     }
 
-    @GetMapping(path = {"/location/{location}"})
-    public ResponseEntity<ApiResponse> getByLocation(final @PathVariable String location) {
+    @GetMapping(path = "/sort")
+    public ResponseEntity<ApiResponse> getByLocation(final @RequestParam(name = "location") String location) {
         return ResponseEntity.ok(new ApiResponse(
                 "Cycling Tours made " + location,
                 this.cyclingService.findByLocation(location.trim().toUpperCase())));
