@@ -10,11 +10,11 @@ import java.util.Locale;
 import java.util.Optional;
 
 @Repository
-public class CyclingRepository {
+public class JdbcClientCyclingRepository {
 
     private final JdbcClient jdbcClient;
 
-    public CyclingRepository(JdbcClient jdbcClient) {
+    public JdbcClientCyclingRepository(JdbcClient jdbcClient) {
         this.jdbcClient = jdbcClient;
     }
 
