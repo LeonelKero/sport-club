@@ -20,7 +20,7 @@ public record CreateCyclingTour(
         LocalDateTime completedAt,
 
         @Positive
-        Double distance,
+        Float distance,
 
         Location location
 ) {
