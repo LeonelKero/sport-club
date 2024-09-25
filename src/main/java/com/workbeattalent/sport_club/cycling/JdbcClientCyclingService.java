@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import java.util.Collection;
 import java.util.List;
 
-@Service
+@Service(value = "jdbc-client")
 public class JdbcClientCyclingService implements CyclingService {
 
     private final JdbcClientCyclingRepository JDBCClientCyclingRepository;
