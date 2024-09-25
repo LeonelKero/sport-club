@@ -12,6 +12,7 @@ started_on timestamp not null,
 completed_on timestamp not null,
 distance double precision not null,
 location varchar(20) not null,
+version int,
 primary key (id)
 );
 -- Alter the sequence
