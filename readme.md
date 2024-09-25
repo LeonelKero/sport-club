@@ -20,3 +20,4 @@
 - Remove record
 - Update record
 - Get records by location
+- Call external service [Json Placeholder/users](https://jsonplaceholder.typicode.com/users)
