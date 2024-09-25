@@ -1,7 +1,7 @@
 package com.workbeattalent.sport_club.user;
 
 public record User(
-        Long id,
+        Integer id,
         String name,
         String username,
         String email,
