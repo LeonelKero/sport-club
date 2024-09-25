@@ -25,7 +25,7 @@ public class UserRestClient {
                 });
     }
 
-    public User getById(final Long id) {
+    public User getById(final Integer id) {
         return this.restClient.get()
                 .uri("/users/{id}", id)
                 .retrieve()
