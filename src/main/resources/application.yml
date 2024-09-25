@@ -3,6 +3,9 @@ server:
 spring:
   application:
     name: sport-club
+  profiles:
+    active:
+      - prod
 
 api:
   v1:

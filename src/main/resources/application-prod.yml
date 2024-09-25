@@ -1,8 +1,8 @@
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/sports
-    username: postgres
-    password: postgres
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/sports
+#    username: postgres
+#    password: postgres
   # Run the script inside schema.sql file
   sql:
     init:
