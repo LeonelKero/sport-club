@@ -50,6 +50,7 @@ public class JdbcClientCyclingRepository {
     }
 
     public void update(final Long tour, final CreateCyclingTour cyclingTour) {
+        // Todo: Miss behaving method
         final var affectedRows = this.jdbcClient
                 .sql("update cycling set title = ?, started_on = ?, completed_on = ?, " +
                         "distance = ?, location = ? where id = ?")
@@ -60,6 +61,7 @@ public class JdbcClientCyclingRepository {
     }
 
     public void delete(final Long id) {
+        // Todo: Miss behaving method
         final var affectedRows = this.jdbcClient.sql("delete from cycling where id = :id")
                 .param("id", id)
                 .update();
