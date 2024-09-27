@@ -75,7 +75,7 @@ public class JdbcClientCyclingRepository {
                 .size();
     }
 
-    public void saveAll(final Collection<CreateCyclingTour> cyclingTours) {
+    public void saveAll(final List<CreateCyclingTour> cyclingTours) {
         cyclingTours.forEach(this::save);
     }
 }
