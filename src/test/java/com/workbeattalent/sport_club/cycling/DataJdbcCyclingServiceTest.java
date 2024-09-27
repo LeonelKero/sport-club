@@ -19,15 +19,11 @@ class DataJdbcCyclingServiceTest {
     @Autowired
     private DataJdbcCyclingService underTest;
 
-    @BeforeEach
-    void setUp() {
+    @Test
+    void findAll() {
         final var tour1 = new CreateCyclingTour("Banengo", LocalDateTime.of(2024, 6, 12, 6, 30, 0),
                 LocalDateTime.of(2024, 6, 12, 8, 30, 0), 5.5, Location.IN_CITY);
         this.underTest.save(tour1);
-    }
-
-    @Test
-    void findAll() {
         // GIVEN // WHEN
         final var response = this.underTest.findAll();
         // THEN
