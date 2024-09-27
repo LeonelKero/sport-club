@@ -12,6 +12,7 @@
 - Spring Starter Test
 - JSON
 - Spring Starter Data JDBC (The model representing the class must have a version field of type int).
+- Tests JUnit5, Mockito, JdbcTest, WebMvcTest, RestClientTest, SpringBootTest
 
 ## Features
 
@@ -20,4 +21,8 @@
 - Remove record
 - Update record
 - Get records by location
-- Call external service [Json Placeholder/users](https://jsonplaceholder.typicode.com/users)
+- Call external service [Json Placeholder/users endpoint](https://jsonplaceholder.typicode.com/users)
+
+## Credit
+
+Happy Coding!
