@@ -17,8 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @WebMvcTest({CyclingController.class})
 class CyclingControllerTest {
@@ -108,11 +107,15 @@ class CyclingControllerTest {
                 LocalDateTime.of(2024, 6, 12, 8, 30, 0),
                 5.5,
                 Location.IN_CITY);
-        // WHENc // THEN // TODO: Must mock method 'save' of the service layer
+
+        // WHENc // THEN
         mvc.perform(MockMvcRequestBuilders.post(BASE_URL + "/cycling")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .contentType(objectMapper.writeValueAsString(tour)))
+                        .content(objectMapper.writeValueAsString(tour)))
                 .andExpect(MockMvcResultMatchers.status().isCreated());
+
+        verify(this.cyclingService, times(1))
+                .save(any(CreateCyclingTour.class));
     }
 
     // TODO: Update method follows pretty much the same approach
