@@ -17,7 +17,7 @@ public class SportClubApplication {
         SpringApplication.run(SportClubApplication.class, args);
     }
 
-    @Bean
+//    @Bean
     UserHTTPClient userHTTPClient() {
         final var restClient = RestClient.create("https://jsonplaceholder.typicode.com");
         final var factory = HttpServiceProxyFactory
@@ -27,7 +27,7 @@ public class SportClubApplication {
         return factory.createClient(UserHTTPClient.class);
     }
 
-    @Bean
+//    @Bean
     CommandLineRunner runner(UserHTTPClient client) {
         return args -> {
             final var user = client.findById(10);
