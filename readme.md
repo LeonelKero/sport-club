@@ -11,7 +11,7 @@
 - Spring Starter Validation
 - Spring Starter Test
 - JSON
-- Spring Starter Data JDBC
+- Spring Starter Data JDBC (The model representing the class must have a version field of type int).
 
 ## Features
 
